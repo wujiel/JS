@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="keywords" content="河北师大 DC街舞社 注册界面">
+<meta name="description" content="DC街舞社注册界面">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="auther" content="无劫">
+<style type="text/css">
+#main{
+        position: absolute;
+        top: 15%;
+        left: 0px;
+        width: 80%;
+        height: 70%;
+}
+body{
+        background: url(bg.jpg);
+}
+input{
+        margin-top: 10px; 
+}
+#button5
+{
+        width: 100px;
+        height: 30px;
+}
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+                <script>
+                        $(function(){
+
+                                $("#button5").click(function(){
+                                        var reuser=$("input[name='user2']").val();
+                                        var repas=$("input[name='password2']").val();
+                                        var repas2=$("input[name='password3']").val();
+                                        var phonenum=$("input[name='phone']").val();
+                                        var check=$("input[type='checkbox']");
+                                        
+
+
+                                        var tag=0;
+                                        if(reuser=="")
+                                                alert("真实姓名不能为空！");
+                                        else if(repas=="")
+                                                alert("密码不能为空！");
+                                        else if(repas2=="")
+                                                alert("确认密码不能为空!");
+                                        else if(repas2!=""&&repas2!=repas)
+                                                alert("两次密码输入不一致！");
+                                        else if(phonenum=="")
+                                                alert("手机号码不能为空！");
+                                        else if(!check.is(":checked"))
+                                        {
+                                                alert("必选选择一个方向！");
+                                        }
+                                        else
+                                        {
+                                                alert("恭喜"+reuser+"同学注册成功！");
+
+                                        }
+                                        
+                                });
+                        });
+                        </script>
+        <title>注册界面</title>
+</head>
+<body >
+            <div id="register" >
+                                <div id="zhuce" align="center">
+                                        <h1>欢迎来到DC街舞社报名页面</h1>
+                                        <form>
+                                             
+                                                请选择年级：<select>
+                                                        <option>2016</option>
+                                                        <option>2017</option>
+                                                        <option>2018</option>
+                                                        <option>2019</option>
+                                                </select><br/>
+                                                真实姓名：&nbsp;&nbsp;<input type="text" name="user2" style="height: 20px;"/><br/>
+                                                 密 码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password2" style="height: 20px;"/><br/>
+                                                 确认密码：&nbsp;&nbsp;<input type="password" name="password3" style="height: 20px;"/><br/>
+                                                 手机号码：&nbsp;&nbsp;<input type="text" name="phone" style="height: 20px;"/><br/>
+                                                 舞种方向：
+                                                        breaking<input type="checkbox" name="checkbox1" id="checkbox1">
+                                                        hiphop<input type="checkbox" name="checkbox2" id="checkbox2">
+                                                        jazz<input type="checkbox" name="checkbox3" id="checkbox3">
+                                                        urban<input type="checkbox" name="checkbox4" id="checkbox4">
+                                                        popping<input type="checkbox" name="checkbox5" id="checkbox5">
+                                                 <br/>
+                                                 <input type="button" name="button5" id="button5" value="确认注册" />
+                                        </form>
+                                </div>
+                                
+                                </div>
+                        </div>
+
+
+</body>
+</html>
